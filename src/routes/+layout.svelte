@@ -8,6 +8,10 @@
 	let { children } = $props();
 </script>
 
+<svelte:head>
+  <title>_deltea</title>
+</svelte:head>
+
 <div class="min-h-screen flex justify-center">
   <main class="h-full w-[64rem] relative p-8 flex flex-col items-center">
     <Nav />

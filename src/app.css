@@ -31,6 +31,7 @@
 @theme {
   --color-border: #3f3f46;
   --color-surface: #55555e;
+  --color-bright: #7f7f8c;
   --color-bg: #18181b;
   --color-fg: #e4e4e7;
   --color-accent: #f6b300;
@@ -42,4 +43,8 @@
 
 body {
   @apply bg-bg text-fg selection:bg-accent selection:text-fg tracking-tight;
+}
+
+* {
+  @apply scroll-smooth;
 }

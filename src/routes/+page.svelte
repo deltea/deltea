@@ -1,4 +1,6 @@
 <script lang="ts">
+  import Separator from "$lib/components/Separator.svelte";
+
   interface Project {
     title: string;
     type: "web" | "game";
@@ -8,7 +10,13 @@
     source?: string;
   }
 
-  let projects: Project[] = [
+  interface Tech {
+    icon: string;
+    color: string;
+    link: string;
+  }
+
+  const projects: Project[] = [
     // ------ game projects ------
     {
       title: "Power Cut",
@@ -82,10 +90,73 @@
       source: "https://github.com/deltea/youguess",
     }
   ];
+
+  const techs: Tech[] = [
+    {
+      icon: "ri:svelte-fill",
+      color: "#F54419",
+      link: "https://svelte.dev",
+    },
+    {
+      icon: "ri:tailwind-css-fill",
+      color: "#00B5F7",
+      link: "https://tailwindcss.com/",
+    },
+    {
+      icon: "simple-icons:github",
+      color: "#E6ECF3",
+      link: "https://github.com",
+    },
+    {
+      icon: "mdi:language-typescript",
+      color: "#3175C0",
+      link: "https://www.typescriptlang.org/",
+    },
+    {
+      icon: "simple-icons:obsidian",
+      color: "#A186F1",
+      link: "https://obsidian.md/",
+    },
+    {
+      icon: "mingcute:arc-browser-fill",
+      color: "#F49495",
+      link: "https://arc.net",
+    },
+    {
+      icon: "simple-icons:godotengine",
+      color: "#4C8BBB",
+      link: "https://godotengine.org/",
+    },
+    {
+      icon: "tabler:brand-vercel-filled",
+      color: "#F5F5F6",
+      link: "https://vercel.com/",
+    },
+    {
+      icon: "simple-icons:bambulab",
+      color: "#12A742",
+      link: "https://bambulab.com/",
+    },
+    {
+      icon: "cib:itch-io",
+      color: "#F55959",
+      link: "https://itch.io/",
+    },
+    {
+      icon: "mingcute:vscode-fill",
+      color: "#27A3E9",
+      link: "https://code.visualstudio.com/",
+    },
+    {
+      icon: "simple-icons:raycast",
+      color: "#FA6B6D",
+      link: "https://raycast.com/",
+    }
+  ]
 </script>
 
 {#each ["game", "web"] as type}
-  <div class="flex items-center gap-4 mb-12 text-border italic">
+  <div id={type} class="flex items-center gap-4 mb-12 text-border italic text-lg">
     <h2 class="underline text-accent underline-offset-8 decoration-2 font-bold">
       {type === "game" ? "games" : "web apps"}
     </h2>
@@ -125,5 +196,35 @@
     {/each}
   </ul>
 
-  <hr class="border-t-2 border-border border-dashed w-full my-12">
+  <Separator />
 {/each}
+
+<div id="tech" class="flex items-center gap-4 mb-12 text-border italic text-lg">
+  <h2 class="underline text-accent underline-offset-8 decoration-2 font-bold">
+    tech
+  </h2>
+
+  <p>{"->"}</p>
+
+  <h2 class="text-surface">
+    the tools i use to make stuff with
+  </h2>
+</div>
+
+<ul class="grid grid-cols-6 gap-6">
+  {#each techs as tech}
+    <a
+      aria-label="button"
+      href={tech.link}
+      class="border-2 border-dashed border-border hover:border-[var(--color)] flex justify-center items-center size-20 rounded-md text-bright group"
+      style="--color: {tech.color};"
+      target="_blank"
+    >
+      <iconify-icon icon={tech.icon} class="text-2xl group-hover:text-[var(--color)]"></iconify-icon>
+    </a>
+  {/each}
+</ul>
+
+<h3 class="mt-8">...and many more</h3>
+
+<Separator />
