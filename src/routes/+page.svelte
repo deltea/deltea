@@ -88,6 +88,22 @@
       image: "/images/projects/youguess.png",
       link: "https://youguess.vercel.app/",
       source: "https://github.com/deltea/youguess",
+    },
+    {
+      title: "Atlas Academy",
+      type: "web",
+      description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatibus.",
+      image: "/images/projects/atlas-academy.png",
+      link: "https://atlasacademy.blog/",
+      source: "https://github.com/deltea/atlasacademy.blog",
+    },
+    {
+      title: "Color Pong",
+      type: "web",
+      description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatibus.",
+      image: "/images/projects/color-pong.png",
+      link: "https://color-pong.vercel.app/",
+      source: "https://github.com/deltea/color-pong",
     }
   ];
 
@@ -161,7 +177,7 @@
       {type === "game" ? "games" : "web apps"}
     </h2>
 
-    <p>{"->"}</p>
+    <p>{">"}</p>
 
     <h2 class="text-surface">
       {type === "game"
@@ -204,7 +220,7 @@
     tech
   </h2>
 
-  <p>{"->"}</p>
+  <p>{">"}</p>
 
   <h2 class="text-surface">
     the tools i use to make stuff with

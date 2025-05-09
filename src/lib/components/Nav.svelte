@@ -3,6 +3,7 @@
     "the wpis are wip-ing",
     "computers are kinda cool i guess",
     "you can just do things",
+    "imagine having a bad portfolio website",
   ];
 </script>
 
