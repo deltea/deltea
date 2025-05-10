@@ -41,10 +41,6 @@
   --default-font-family: "Cartograph CF", sans-serif;
 }
 
-body {
-  @apply bg-bg text-fg selection:bg-accent selection:text-fg tracking-tight;
-}
-
-* {
-  @apply scroll-smooth;
+body, html {
+  @apply bg-bg text-fg selection:bg-accent selection:text-fg tracking-tight scroll-smooth;
 }
