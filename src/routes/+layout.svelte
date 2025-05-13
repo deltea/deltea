@@ -3,13 +3,15 @@
   import "iconify-icon";
   import { onMount } from "svelte";
 
-  // vercel analytics
+  // vercel stuff
   import { injectAnalytics } from "@vercel/analytics/sveltekit"
+  import { injectSpeedInsights } from "@vercel/speed-insights/sveltekit";
 
   import Nav from "$lib/components/Nav.svelte";
   import Footer from "$lib/components/Footer.svelte";
 
-  onMount(injectAnalytics);
+  injectAnalytics();
+  injectSpeedInsights();
 
 	let { children } = $props();
 </script>
