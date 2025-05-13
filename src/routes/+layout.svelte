@@ -1,12 +1,15 @@
 <script lang="ts">
 	import "../app.css";
   import "iconify-icon";
+  import { onMount } from "svelte";
 
   // vercel analytics
   import { injectAnalytics } from "@vercel/analytics/sveltekit"
 
   import Nav from "$lib/components/Nav.svelte";
   import Footer from "$lib/components/Footer.svelte";
+
+  onMount(injectAnalytics);
 
 	let { children } = $props();
 </script>
