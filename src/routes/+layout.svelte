@@ -2,6 +2,9 @@
 	import "../app.css";
   import "iconify-icon";
 
+  // vercel analytics
+  import { injectAnalytics } from "@vercel/analytics/sveltekit"
+
   import Nav from "$lib/components/Nav.svelte";
   import Footer from "$lib/components/Footer.svelte";
 
