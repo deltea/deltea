@@ -172,12 +172,12 @@
 </script>
 
 {#each ["game", "web"] as type}
-  <div id={type} class="flex items-center gap-4 mb-12 text-border italic text-lg">
+  <div id={type} class="flex flex-col md:flex-row text-center items-center gap-4 mb-12 text-border italic text-lg">
     <h2 class="underline text-accent underline-offset-8 decoration-2 font-bold">
       {type === "game" ? "games" : "web apps"}
     </h2>
 
-    <p>{">"}</p>
+    <p class="hidden md:block">{">"}</p>
 
     <h2 class="text-surface">
       {type === "game"
@@ -186,7 +186,7 @@
     </h2>
   </div>
 
-  <ul class="gap-x-6 gap-y-12 grid grid-cols-2">
+  <ul class="gap-x-6 gap-y-12 grid grid-cols-1 md:grid-cols-2">
     {#each projects.filter(p => p.type === type) as project}
       <li class="w-full flex flex-col gap-4 items-start">
         <div class="border-2 border-border hover:border-accent border-dashed rounded-md flex items-center justify-center p-4 w-full">
@@ -215,19 +215,19 @@
   <Separator />
 {/each}
 
-<div id="tech" class="flex items-center gap-4 mb-12 text-border italic text-lg">
+<div id="tech" class="flex flex-col md:flex-row text-center items-center gap-4 mb-12 text-border italic text-lg">
   <h2 class="underline text-accent underline-offset-8 decoration-2 font-bold">
     tech
   </h2>
 
-  <p>{">"}</p>
+  <p class="hidden md:block">{">"}</p>
 
   <h2 class="text-surface">
     the tools i use to make stuff with
   </h2>
 </div>
 
-<ul class="grid grid-cols-6 gap-6">
+<ul class="grid grid-cols-3 md:grid-cols-6 gap-6">
   {#each techs as tech}
     <a
       aria-label="button"

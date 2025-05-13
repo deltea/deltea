@@ -1,4 +1,4 @@
-<footer class="flex items-center justify-between h-12 w-full text-surface">
+<footer class="flex flex-col md:flex-row gap-2 items-center justify-between h-12 w-full text-surface">
   <p>made with sveltekit and love</p>
 
   <div class="flex gap-4">
