@@ -164,10 +164,15 @@
       link: "https://code.visualstudio.com/",
     },
     {
-      icon: "simple-icons:raycast",
-      color: "#FA6B6D",
-      link: "https://raycast.com/",
-    }
+      icon: "simple-icons:astro",
+      color: "#FF5D10",
+      link: "https://astro.build/",
+    },
+    // {
+    //   icon: "simple-icons:raycast",
+    //   color: "#FA6B6D",
+    //   link: "https://raycast.com/",
+    // }
   ]
 </script>
 
