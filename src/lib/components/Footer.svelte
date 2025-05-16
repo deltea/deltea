@@ -7,5 +7,7 @@
     <a class="hover:text-fg" target="_blank" href="https://twitter.com/_deltea">twitter</a>
     <p>-</p>
     <a class="hover:text-fg" target="_blank" href="https://deltea.itch.io">itch.io</a>
+    <p>-</p>
+    <a class="hover:text-fg" target="_blank" href="https://github.com/deltea/dotfiles">dotfiles</a>
   </div>
 </footer>
